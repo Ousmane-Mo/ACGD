@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/S-Logo.png" type="icon">
+    <title>Family Guy</title>
+    <link rel="stylesheet" href="../styles/community.css">
+    <script src="https://kit.fontawesome.com/0860c28f1b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img class="page-logo" src="../../Images/FG.png" alt="Logo Family Guy"></a>
+        </div>
+        <div class="menu">
+            <nav class="menu-content">
+                <a href="characters.html">Characters</a>
+                <a href="community.html">Community</a>
+                <a href="threat.html">Don't click this or else</a>
+            </nav>
+        </div>
+        <div class="dropdown">
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu">
+                <i class="fa-solid fa-bars fa-2xl"></i>
+            </label>
+
+        <nav>
+            <ul class="dropdown-content">
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="threat.html">Don't click this or else</a></li>
+            </ul>
+        </nav>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <h2 class="welcome-heading">The community is growing!</h2>
+            <div class="welcome-text">
+                Welcome to the Community section of our website! Here you'll be able to chat with other fans
+                and discuss the latests episodes or share about your favourites moments or characters from the show.
+                We are always happy to see new faces around here so don’t hesitate to join us !
+            </div>
+        </section>
+        <section class="comments-container">
+            <div class="fake-comments-container c1">
+                <div class="user">
+                    <div class="pfp">
+                        <img src="../images/Characters/adam_west-pfp.png" alt="Adam West's profile picture">
+                    </div>
+                    <span class="username">Mayor West</span>
+                </div>
+                <div class="published-hour">
+                    season 2024 part 1 episode 4 14h48
+                </div>
+                <div class="fake-comment">
+                    My God! My wife is seeing another mayor!
+                </div>
+            </div>
+            <div class="fake-comments-container c2">
+                <div class="user">
+                    <div class="pfp">
+                        <img src="../images/Characters/Bruce.png" alt="Bruces's profile picture">
+                    </div>
+                    <span class="username">Bruce</span>
+                </div>
+                <div class="published-hour">
+                    season 2024 part 1 episode 4 14h51
+                </div>
+                <div class="fake-comment">
+                    Oh, noo! That's horrible y'all!
+                </div>
+            </div>
+            <div class="fake-comments-container c1">
+                <div class="user">
+                    <div class="pfp">
+                        <img src="../images/Characters/stewie-griffin-pfp.png" alt="Stewie's profile picture">
+                    </div>
+                    <span class="username">Stewie</span>
+                </div>
+                <div class="published-hour">
+                    season 2024 part 1 episode 6 2h57
+                </div>
+                <div class="fake-comment">
+                    You know, I rather like this God fellow. Very theatrical, you know. Pestilence here, a plague there. Omnipotence... gotta get me some of that.
+                </div>
+            </div>
+            <div class="fake-comments-container c2">
+                <div class="user">
+                    <div class="pfp">
+                        <img src="../images/Characters/brian-griffin-pfp.jpg" alt="Adam West profile picture">
+                    </div>
+                    <span class="username">Brian</span>
+                </div>
+                <div class="published-hour">
+                    season 2024 part 1 episode 6 3h03
+                </div>
+                <div class="fake-comment">
+                    If there was a God would He give you a smokin' hot mom like Lois and then have you grow up looking like Peter?
+                </div>
+            </div>
+            <div class="fake-comments-container c1">
+                <div class="user">
+                    <div class="pfp">
+                        <img src="../images/Characters/stewie-griffin-pfp.png" alt="Stewie'sprofile picture">
+                    </div>
+                    <span class="username">Stewie</span>
+                </div>
+                <div class="published-hour">
+                    season 2024 part 1 episode 6 3h9
+                </div>
+                <div class="fake-comment">
+                    ... I'd like to stay and chat, but you're a total bitch.
+                </div>
+            </div>
+           
+        </section>
+        <section class="publish-comments-container">
+            <form action="" method="get" class="publish-comments">
+                <div class="publishers-username">
+                    <label for="username">Username:</label>
+                    <input id="username" type="text" name="username" class="form-control" placeholder="Username" required>
+                </div>
+                <div class="publishers-character">
+                    <label for="characters">Choose your fav: </label>
+                    <select name="character" id="character" class="form-control">
+                        <option value="choice" disabled selected>--Choose a character--</option>
+                        <option value="peter">Peter</option>
+                        <option value="lois">Lois</option>
+                        <option value="meg">Meg</option>
+                        <option value="chrissy">Chrissy</option>
+                        <option value="stewie">Stewie</option>
+                        <option value="brian">Brian</option>
+                        <option value="cleveland">Cleveland</option>
+                        <option value="quagmire">Quagmire</option>
+                        <option value="joe">Joe</option>
+                        <option value="bonnie">Bonnie</option>
+                    </select>
+                </div>
+                <div class="publishers-comment">
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" rows="4" cols="50" name="comment" class="form-control comment-area" placeholder="Write your comment here"></textarea>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" class="btn-publish">Publish</button>
+                </div>
+                
+            </form>
+        </section>
+    </main>
+
+    <button class="btt"><i class="fa-solid fa-arrow-up fa-2xl"></i></button>
+
+<footer>
+    <div class="ft-content">
+        <div class="ft-text">
+            - Stewie, quick make a footer.
+            - No, thank you, I'd much rather give you the finger.”
+        </div>
+        <div class="ft-image">
+            <img src="../images/stewie-middle-finger.png" alt="Stewie giving you the finger">
+        </div>
+    </div>
+</footer>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const backToTopButton = document.querySelector('.btt');
+        if (window.scrollY > 75) {
+            backToTopButton.style.opacity = '1';
+            backToTopButton.style.pointerEvents = 'auto';
+        } else {
+            backToTopButton.style.opacity = '0';
+            backToTopButton.style.pointerEvents = 'none';
+        }
+    });
+
+    document.querySelector('.btt').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+</body>
+</html>

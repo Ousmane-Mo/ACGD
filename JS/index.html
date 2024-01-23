@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js" ></script>
+    <title>Oui</title>
+</head>
+<body>
+    <!-- Formulaire basique -->
+    <!-- <form action="">
+        <label for="prenom">Entre ton prénom</label>
+        <input type="text" id="prenom" name="prenom">
+        <label for="nom">Entre ton nom</label>
+        <input type="text" id="nom" name="nom">
+        <button type="button" id="btn-submit" onclick="Afficher()">Valider</button>
+    </form> -->
+    <!-- Calculatrice V1 -->
+    <!-- <form action="">
+        <input type="text" id="nbr1" name="nbr1">
+        <input type="text" id="sign" name="sign">
+        <input type="text" id="nbr2" name="nbr2">
+        <button type="button" id="btn-submit" onclick="CalculatriceV1()">calculer</button>
+    </form> -->
+    <!-- Calculatrice V2 -->
+    <!-- <table>
+        <thead>
+          <td colspan="4" text-align="center" id="case">
+            <span id="calc-output"></span>
+          </td>
+        </thead>
+       <tr>
+         <td>
+           <input class="number" type="button" value="1" id="button-1" onclick="btn(1)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="2" id="button-2" onclick="btn(2)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="3" id="button-3" onclick="btn(3)"/>
+         </td>
+         <td>
+           <input class="operator" type="button" value="C" id="button-C" onclick="btnClean()"/>
+         </td>
+       </tr>
+
+       <tr>
+         <td>
+           <input class="number" type="button" value="4" id="button-4" onclick="btn(4)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="5" id="button-5" onclick="btn(5)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="6" id="button-6" onclick="btn(6)"/>
+         </td>
+         <td>
+           <input class="operator" type="button" value="+" id="button-+" onclick="btnPlus()"/>
+         </td>
+       </tr>
+
+       <tr>
+         <td>
+           <input class="number" type="button" value="7" id="button-7" onclick="btn(7)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="8" id="button-8" onclick="btn(8)"/>
+         </td>
+         <td>
+           <input class="number" type="button" value="9" id="button-9" onclick="btn(9)"/>
+         </td>
+         <td>
+           <input class="operator" type="button" value="-" id="button--" onclick="btnSubstract()"/>
+         </td>
+       </tr>
+
+       <tr>
+         <td>
+           <input class="operator" type="button" value="x" id="button-*" onclick="btnMultiply()"/>
+         </td>
+         <td>
+           <input class="number"type="button" value="0" id="button-0" onclick="btn(0)"/>
+         </td>
+         <td>
+           <input class="operator" type="button" value="÷" id="button-/" onclick="btnDivision()"/>
+         </td>
+         <td>
+           <input class="operator" type="button" value="=" id="button-=" onclick="btnEgal()"/>
+         </td>
+       </tr>
+     </table> -->
+    <!-- Gestion des classes -->
+    <!-- <p id="text-1">“C'est l'histoire d'un mec très flexible qui avait un rêve”</p>
+    <button type="button" id="btn-spoiler1">Spoiler 1</button>
+    <p id="text-2" class="">“Après avoir causé une guerre pour sauver son frère, il finit par voir son frère mourir sous ses yeux en voulant le proteger”</p>
+    <button type="button" id="btn-spoiler2"> Spoiler 2</button>
+    <button type="button" id="shine">Shiny</button>
+    <p id="text-3" class="">“Un jour il devient empereur après avoir tabassé un dragon”</p> -->
+    <!-- Filtrage -->
+    <!-- <select name="filtrage" id="filtre">
+      <option value="all" selected disabled>Choisissez une catégorie</option>
+      <option value="fruits" id="optfruits">Fruits</option>
+      <option value="bouffe" id="optbouffe">Bouffe</option>
+      <option value="boisson" id="optboisson">Boisson</option>
+    </select> -->
+    <ul>
+      <li id="all">Display All</li>
+      <li id="optfruits" >Fruits</li>
+      <li id="optbouffe">Bouffe</li>
+      <li id="optboisson" >Boisson</li>
+    </ul> 
+    <ul>
+      <li class="fruit">Ananas</li>
+      <li class="fruit">Mangue</li>
+      <li class="fruit">Kiwi</li>
+      <li class="fruit">Poire</li>
+      <li class="fruit">Kaki</li>
+      <li class="bouffe">Pizza</li>
+      <li class="bouffe">Frites</li>
+      <li class="bouffe">Burger</li>
+      <li class="bouffe">Pizza</li>
+      <li class="bouffe">Lasagnes</li>
+      <li class="boisson">Fuze Tea</li>
+      <li class="boisson">Coca cherry</li>
+      <li class="boisson">Fanta Fraise Kiwi</li>
+      <li class="boisson">7up Mojito</li>
+      <li class="boisson">Schwepps Agrumes</li>
+    </ul>
+    <!-- Change color div -->
+    <div style="background-color: transparent">
+        <button>Mon 1er Bouton</button>
+      </div>
+      <div>
+        <button>Mon 2ème Bouton</button>
+      </div>
+      <div>
+        <button>Mon 3ème Bouton</button>
+      </div>
+    
+</body>
+
+</html>

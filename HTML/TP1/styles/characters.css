@@ -1,0 +1,353 @@
+@import url(style.css);
+
+
+h2{
+    font-family: 'FG';
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size:xx-large;
+}
+.slideshow-part{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+        .slideshow {
+            height: 400px;
+            width: 700px;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            padding: 0;
+          }
+          
+          /* Hides all slides and slides controls */
+          .slideshow__controls, .slideshow__slide, .slideshow__activator { display: none; }
+          
+          /* Once a slide is selected it fades in.
+          It will also display the selectors allowing to go to the previous and the next slide */
+            .slideshow__activator:nth-of-type(10):checked ~ .slideshow__slide:nth-of-type(10) {
+                -webkit-animation: slideshow-show-slide 1.5s;
+                animation: slideshow-show-slide 1.5s;
+                display: block;
+            }
+            .slideshow__activator:nth-of-type(10):checked ~ .slideshow__controls:nth-of-type(10) { display: block; }
+            .slideshow__activator:nth-of-type(10):checked ~ .slideshow__indicators .slideshow__indicator:nth-of-type(10) { opacity: 1; }
+            
+            .slideshow__activator:nth-of-type(9):checked ~ .slideshow__slide:nth-of-type(9) {
+            -webkit-animation: slideshow-show-slide 1.5s;
+            animation: slideshow-show-slide 1.5s;
+            display: block;
+            }
+            .slideshow__activator:nth-of-type(9):checked ~ .slideshow__controls:nth-of-type(9) { display: block; }
+            .slideshow__activator:nth-of-type(9):checked ~ .slideshow__indicators .slideshow__indicator:nth-of-type(9) { opacity: 1; }
+            
+            .slideshow__activator:nth-of-type(8):checked ~ .slideshow__slide:nth-of-type(8) {
+            -webkit-animation: slideshow-show-slide 1.5s;
+            animation: slideshow-show-slide 1.5s;
+            display: block;
+            }
+            .slideshow__activator:nth-of-type(8):checked ~ .slideshow__controls:nth-of-type(8) { display: block; }
+            .slideshow__activator:nth-of-type(8):checked ~ .slideshow__indicators .slideshow__indicator:nth-of-type(8) { opacity: 1; }
+            
+            .slideshow__activator:nth-of-type(7):checked ~ .slideshow__slide:nth-of-type(7) {
+            -webkit-animation: slideshow-show-slide 1.5s;
+            animation: slideshow-show-slide 1.5s;
+            display: block;
+            }
+            .slideshow__activator:nth-of-type(7):checked ~ .slideshow__controls:nth-of-type(7) { display: block; }
+            .slideshow__activator:nth-of-type(7):checked ~ .slideshow__indicators .slideshow__indicator:nth-of-type(7) { opacity: 1; }
+            
+            .slideshow__activator:nth-of-type(6):checked ~ .slideshow__slide:nth-of-type(6) {
+            -webkit-animation: slideshow-show-slide 1.5s;
+            animation: slideshow-show-slide 1.5s;
+            display: block;
+            }
+            .slideshow__activator:nth-of-type(6):checked ~ .slideshow__controls:nth-of-type(6) { display: block; }
+            .slideshow__activator:nth-of-type(6):checked ~ .slideshow__indicators .slideshow__indicator:nth-of-type(6) { opacity: 1; }
+            
+            .slideshow__activator:nth-of-type(5):checked ~ .slideshow__slide:nth-of-type(5) {
+            -webkit-animation: slideshow-show-slide 1.5s;
+            animation: slideshow-show-slide 1.5s;
+            display: block;
+            }
+            .slideshow__activator:nth-of-type(5):checked ~ .slideshow__controls:nth-of-type(5) { display: block; }
+            .slideshow__activator:nth-of-type(5):checked ~ .slideshow__indicators .slideshow__indicator:nth-of-type(5) { opacity: 1; }
+            
+            .slideshow__activator:nth-of-type(4):checked ~ .slideshow__slide:nth-of-type(4) {
+            -webkit-animation: slideshow-show-slide 1.5s;
+            animation: slideshow-show-slide 1.5s;
+            display: block;
+            }
+            .slideshow__activator:nth-of-type(4):checked ~ .slideshow__controls:nth-of-type(4) { display: block; }
+            .slideshow__activator:nth-of-type(4):checked ~ .slideshow__indicators .slideshow__indicator:nth-of-type(4) { opacity: 1; }
+
+          .slideshow__activator:nth-of-type(3):checked ~ .slideshow__slide:nth-of-type(3) {
+            -webkit-animation: slideshow-show-slide 1.5s;
+            animation: slideshow-show-slide 1.5s;
+            display: block;
+          }
+          .slideshow__activator:nth-of-type(3):checked ~ .slideshow__controls:nth-of-type(3) { display: block; }
+          .slideshow__activator:nth-of-type(3):checked ~ .slideshow__indicators .slideshow__indicator:nth-of-type(3) { opacity: 1; }
+          
+          
+          .slideshow__activator:nth-of-type(2):checked ~ .slideshow__slide:nth-of-type(2) {
+            -webkit-animation: slideshow-show-slide 1.5s;
+            animation: slideshow-show-slide 1.5s;
+            display: block;
+          }
+          .slideshow__activator:nth-of-type(2):checked ~ .slideshow__controls:nth-of-type(2) { display: block; }
+          .slideshow__activator:nth-of-type(2):checked ~ .slideshow__indicators .slideshow__indicator:nth-of-type(2) { opacity: 1; }
+          
+          .slideshow__activator:nth-of-type(1):checked ~ .slideshow__slide:nth-of-type(1) {
+            -webkit-animation: slideshow-show-slide 1.5s;
+            animation: slideshow-show-slide 1.5s;
+            display: block;
+          }
+          .slideshow__activator:nth-of-type(1):checked ~ .slideshow__controls:nth-of-type(1) { display: block; }
+          .slideshow__activator:nth-of-type(1):checked ~ .slideshow__indicators .slideshow__indicator:nth-of-type(1) { opacity: 1; }
+          
+          /* Creates a block which will be used as a pointer to change slides*/
+          .slideshow__control {
+            height: 30px;
+            width: 30px;
+            margin-top: -15px;
+            top: 50%;
+            position: absolute;
+            display: block;
+            cursor: pointer;
+            border-width: 5px 5px 0 0;
+            border-style: solid;
+            border-color: var(--btn);
+            opacity: 0.20;
+            outline: 0;
+            z-index: 3;
+          }
+          
+          .slideshow__control:hover { 
+            opacity: 1; 
+            cursor: url('../images/cursors/quagmire_pointer.png') ,pointer;
+        }
+          
+          .slideshow__control--backward {
+            left: 10px;
+            -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+          }
+          
+          .slideshow__control--forward {
+            right: 10px;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+
+          /* Creates the idnicators that is shown at the bottom of the slides 
+          which can be used to navigate through the slides more easily
+          and also allows us to know how many total slides there is*/
+          
+          .slideshow__indicators {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+          }
+          
+          .slideshow__indicator {
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            display: inline-block;
+            z-index: 2;
+            cursor: pointer;
+            opacity: 0.35;
+            margin: 0 2.5px 0 2.5px;
+          }
+          
+          .slideshow__indicator:hover {
+            opacity: 0.75;
+            cursor: url('../images/cursors/quagmire_pointer.png') ,pointer;
+        }
+          
+          
+          .slideshow__slide {
+            height: 100%;
+            right: 0;
+            position: absolute;
+            overflow-y: auto;
+            top: 0;
+            left: 0;
+          }
+          
+          * { box-sizing: border-box; }
+          
+          .slideshow-container { display: inline-block; }
+          
+          .my-slideshow {
+            border-radius: 10px;
+            border: 2px solid #c0c0c0;
+            margin: 30px;
+
+                a{
+                    text-align: right;
+                    text-decoration: none;
+                    font-family: 'FG';
+                    font-size: larger;
+                    color: var(--btn);
+
+                        li{
+                            padding: 15px;
+                        }
+                }
+          }
+          
+          .slideshow__slide {
+            border-radius: 10px;
+            overflow: hidden;
+          }
+          
+          .slideshow__indicator { background-color: #fafafa; }
+          
+          .slideshow__slide:nth-of-type(1) {
+            background-image: url("../images/Characters/Slideshow/Peter_Griffin.png");
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          
+          .slideshow__slide:nth-of-type(2) {
+            background-image: url("../images/Characters/Slideshow/Lois_Griffin.png");
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          
+          .slideshow__slide:nth-of-type(3) {
+            background-image: url("../images/Characters/Slideshow/Meg_Griffin.png");
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          .slideshow__slide:nth-of-type(4) {
+            background-image: url("../images/Characters/Slideshow/Chris_Griffin.png");
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          .slideshow__slide:nth-of-type(5) {
+            background-image: url("../images/Characters/Slideshow/Stewie-Backpack.png");
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          .slideshow__slide:nth-of-type(6) {
+            background-image: url("../images/Characters/Slideshow/Brian.png");
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          .slideshow__slide:nth-of-type(7) {
+            background-image: url("../images/Characters/Slideshow/Cleveland_Brown.png");
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          .slideshow__slide:nth-of-type(8) {
+            background-image: url("../images/Characters/Slideshow/Quagmire.png");
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          .slideshow__slide:nth-of-type(9) {
+            background-image: url("../images/Characters/Slideshow/Joe_Swanson.png");
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          .slideshow__slide:nth-of-type(10) {
+            background-image: url("../images/Characters/Slideshow/Bonnie_Swanson.png");
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          
+}           
+.characters-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 15px 10px 15px 10px;
+        .c1{
+            background-color: var(--c1);
+        }
+        .c2{
+            background-color: var(--c2);
+        }
+        .character{
+            display: flex;
+            align-items: center;
+            border-top: 1px solid whitesmoke;
+            padding: 10px 25px 10px 25px;
+            max-width: -webkit-fill-available;
+            max-height: 220px;
+
+                .char-desc{
+                    font-size: 1.1em;
+                    text-align: justify;
+                    max-height: inherit;
+                    overflow: auto;
+                }
+                .char-pics-container{
+                    width: 100px;
+                    height: 160px;
+                    padding: 10px;
+                        .char-pics{
+                            width: inherit;
+                            height: inherit;
+                        }
+                }
+        }
+
+}
+@media (max-width: 425px) {
+  .slideshow-part {
+
+    padding: 20px 0px 20px 0px;
+      .slideshow {
+      max-width: 50%;
+      }
+  }
+  .characters-container{
+    .character{
+      .char-desc{
+        overflow: auto;
+        font-size: 12px;
+    }
+    }
+  }
+}
+@media (min-width: 425px) and (max-width: 800px) {
+  .slideshow-part {
+
+    padding: 20px 0px 20px 0px;
+      .slideshow {
+      max-width: 600px;
+      }
+  }
+.characters-container{
+  .character{
+    .char-desc{
+      overflow: auto;
+      font-size: 13px;
+  }
+  }
+}
+}
+@-webkit-keyframes slideshow-show-slide {
+      from {
+          opacity: 0;
+      }
+
+      to {
+      opacity: 1;
+      }
+  }
+@keyframes slideshow-show-slide {
+  from {
+  opacity: 0;
+  }
+
+  to{
+      opacity: 1;
+  }
+}

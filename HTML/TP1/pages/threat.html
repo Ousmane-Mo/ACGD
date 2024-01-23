@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/S-Logo.png" type="icon">
+    <title>Family Guy</title>
+    <link rel="stylesheet" href="../styles/threat.css">
+    <script src="https://kit.fontawesome.com/0860c28f1b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img class="page-logo" src="../../Images/FG.png" alt="Logo Family Guy"></a>
+        </div>
+        <div class="menu">
+            <nav class="menu-content">
+                <a href="characters.html">Characters</a>
+                <a href="community.html">Community</a>
+                <a href="threat.html">Don't click this or else</a>
+            </nav>
+        </div>
+        <div class="dropdown">
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu">
+                <i class="fa-solid fa-bars fa-2xl"></i>
+            </label>
+
+        <nav>
+            <ul class="dropdown-content">
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="threat.html">Don't click this or else</a></li>
+            </ul>
+        </nav>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        
+        <section class="threat-container">
+            <div class="threat-message">
+                I told you not to click this
+            </div>
+        </section>
+        
+
+    </main>
+
+    <footer>
+        <div class="ft-content">
+            <div class="ft-text">
+                - Stewie, quick make a footer.
+                - No, thank you, I'd much rather give you the finger.”
+            </div>
+            <div class="ft-image">
+                <img src="../images/stewie-middle-finger.png" alt="Stewie giving you the finger">
+            </div>
+        </div>
+    </footer>
+    
+    <button class="btt"><i class="fa-solid fa-arrow-up fa-2xl"></i></button>
+    <script>
+        window.addEventListener('scroll', () => {
+            const backToTopButton = document.querySelector('.btt');
+            if (window.scrollY > 75) {
+                backToTopButton.style.opacity = '1';
+                backToTopButton.style.pointerEvents = 'auto';
+            } else {
+                backToTopButton.style.opacity = '0';
+                backToTopButton.style.pointerEvents = 'none';
+            }
+        });
+
+        document.querySelector('.btt').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    
+</body>
+</html>

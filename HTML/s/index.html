@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="Images/S&R-Logo.png" type="Images/">
+        <title >Oui</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/0860c28f1b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="script" href="main.js">
+
+    </head>
+    <body>
+        <header>
+            <nav class="menu">
+                <a href="index.html"> <img src="../Images/S&R-Logo.png" alt="Stewie and his plushie Rupert from Family guy" title="Stewie and Rupert"></a>
+                <div>
+                    <a href="#goals">Goals</a>
+                    <a href="#Section2">Grid</a>
+                    <a href="#Section3">Tableau</a>
+                    <a href="#Section4">Formulaire</a>
+                </div>
+            </nav>
+            <nav class="dropdown">
+                <a href="index.html"> <img src="../Images/S&R-Logo.png" alt="Stewie and his plushie Rupert from Family guy" title="Stewie and Rupert"></a>
+                <div>                        
+                    <i class="fa-solid fa-bars fa-2xl">
+                        <input type="checkbox" class="dropbtn">
+                    </i>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="#goals">Goals</a></li>
+                            <li><a href="#Section2">Section 2</a></li>
+                            <li><a href="#Section3">Section 3</a></li>
+                            <li><a href="#Section4">Section 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="stewie">
+                <img class="img-stew" src="../Images/Stewie-stare-down-Rupert.jpg">
+                <div class="family-guy">
+                    <img src="../Images/FG.png" alt="">
+                </div>
+            </div>
+            <h1 class="animate__animated animate__bounce">Stewie and Rupert</h1>
+            <section id="goals">
+                <h2>Stewie's Goals</h2>
+                <ol>
+                    <li><i>Kill Lois</i></li>
+                    <li><i>Take over the world</i></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </section>
+            <section class="gray" id="Section2">
+                <div class="oui-container">
+                    <div class="oui first">Oui 1</div>
+                    <div class="oui second">Oui 2</div>
+                    <div class="oui third">Oui 3</div>
+                    <div class="oui fourth">Oui 4</div>
+            </section>
+            <section id="Section3">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Oui</td>
+                            <td>Carotte</td>
+                            <td>Mangue</td>
+                            <td>Oui</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+
+                    </tfoot>
+                </table>
+                </div>
+            </section>
+            <section class="gray" id="Section4">
+                <form method="get" action="">
+                    <div>
+                        <label for="prenom">Comment vous appelez vous ?</label>
+                        <input type="text" name="prenom" id="prenom">
+                    </div>
+                    <div>
+                        <select name="nationalite" id="nationalite" >                            
+                            <option value="Guinéene" >Guinéene</option>
+                            <option value="Anglaise" >Anglaise</option>
+                            <option value="Française" selected>Française</option>
+                            <option value="Allemande" >Allemande</option>
+                            <option value="Japonaise" >Japonaise</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="radio" name="taille" value="1m50+" id="1m50+">
+                        <label for="taille"> + d'1m50</label>
+                        <input type="radio" name="taille" value="1m60+" id="1m60+">
+                        <label for="taille"> + d'1m60</label>
+                        <input type="radio" name="taille" value="1m75+" id="1m75+">
+                        <label for="taille"> + d'1m75</label>
+                        <input type="radio" name="taille" value="1m90+" id="1m90+">
+                        <label for="taille"> + d'1m90</label>
+                    </div>
+                        <fieldset>
+                            <legend>
+                                Entrez vos coordonnées
+                            </legend>
+                            <label for="prenom">Prenom:</label>
+                            <input type="text" name="prenom" id="prenom">
+                            <label for="nom">Nom:</label>
+                            <input type="text" name="nom" id="prenom">
+                            <label for="email">Mail:</label>
+                            <input type="text" name="email" id="prenom">
+                            <label for="numero">Numéro:</label>
+                            <input type="tel" name="numero" id="prenom"
+                            pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" placeholder="0674241552" maxlength="10">
+                        </fieldset>
+                        <input type="submit" value="Envoyer">
+                </form>
+            </section>
+            
+                <button id="bttb" onclick="backToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+        </main>    
+
+        <footer>
+            <nav>
+                <div>
+                    <a href="contact.html">Contact</a>
+                    <a href="https://mail.google.com/" target="_blank">Email</a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/" target="_blank" ><img src="../Images/instagram.png" alt="Logo Insta" class="lien-icone"></a>
+                    <a href="https://twitter.com/" target="_blank" ><img src="../Images/twitter.png" alt="Logo Twitter" class="lien-icone"></a>
+                </div>
+            </nav>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,374 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pure CSS carousel / slideshow demos</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" rel="stylesheet" type="text/css">
+<style>
+.carousel {
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  padding: 0;
+}
+
+.carousel__controls, .carousel__slide, .carousel__activator { display: none; }
+
+.carousel__activator:nth-of-type(5):checked ~ .carousel__track {
+  -webkit-transform: translateX(-400%);
+  transform: translateX(-400%);
+}
+
+.carousel__activator:nth-of-type(5):checked ~ .carousel__slide:nth-of-type(5) {
+  -webkit-animation: carousel-show-slide 0.5s;
+  animation: carousel-show-slide 0.5s;
+  display: block;
+}
+
+.carousel__activator:nth-of-type(5):checked ~ .carousel__controls:nth-of-type(5) { display: block; }
+
+.carousel__activator:nth-of-type(5):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(5) { opacity: 1; }
+
+.carousel__activator:nth-of-type(4):checked ~ .carousel__track {
+  -webkit-transform: translateX(-300%);
+  transform: translateX(-300%);
+}
+
+.carousel__activator:nth-of-type(4):checked ~ .carousel__slide:nth-of-type(4) {
+  -webkit-animation: carousel-show-slide 0.5s;
+  animation: carousel-show-slide 0.5s;
+  display: block;
+}
+
+.carousel__activator:nth-of-type(4):checked ~ .carousel__controls:nth-of-type(4) { display: block; }
+
+.carousel__activator:nth-of-type(4):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(4) { opacity: 1; }
+
+.carousel__activator:nth-of-type(3):checked ~ .carousel__track {
+  -webkit-transform: translateX(-200%);
+  transform: translateX(-200%);
+}
+
+.carousel__activator:nth-of-type(3):checked ~ .carousel__slide:nth-of-type(3) {
+  -webkit-animation: carousel-show-slide 0.5s;
+  animation: carousel-show-slide 0.5s;
+  display: block;
+}
+
+.carousel__activator:nth-of-type(3):checked ~ .carousel__controls:nth-of-type(3) { display: block; }
+
+.carousel__activator:nth-of-type(3):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(3) { opacity: 1; }
+
+.carousel__activator:nth-of-type(2):checked ~ .carousel__track {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.carousel__activator:nth-of-type(2):checked ~ .carousel__slide:nth-of-type(2) {
+  -webkit-animation: carousel-show-slide 0.5s;
+  animation: carousel-show-slide 0.5s;
+  display: block;
+}
+
+.carousel__activator:nth-of-type(2):checked ~ .carousel__controls:nth-of-type(2) { display: block; }
+
+.carousel__activator:nth-of-type(2):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(2) { opacity: 1; }
+
+.carousel__activator:nth-of-type(1):checked ~ .carousel__track {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+.carousel__activator:nth-of-type(1):checked ~ .carousel__slide:nth-of-type(1) {
+  -webkit-animation: carousel-show-slide 0.5s;
+  animation: carousel-show-slide 0.5s;
+  display: block;
+}
+
+.carousel__activator:nth-of-type(1):checked ~ .carousel__controls:nth-of-type(1) { display: block; }
+
+.carousel__activator:nth-of-type(1):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(1) { opacity: 1; }
+
+.carousel__control {
+  height: 30px;
+  width: 30px;
+  margin-top: -15px;
+  top: 50%;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  border-width: 5px 5px 0 0;
+  border-style: solid;
+  border-color: #fafafa;
+  opacity: 0.35;
+  outline: 0;
+  z-index: 3;
+}
+
+.carousel__control:hover { opacity: 1; }
+
+.carousel__control--forward {
+  left: 10px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.carousel__control--backward {
+  right: 10px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.carousel__indicators {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.carousel__indicator {
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  display: inline-block;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0.35;
+  margin: 0 2.5px 0 2.5px;
+}
+
+.carousel__indicator:hover { opacity: 0.75; }
+
+.carousel__track {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+}
+
+.carousel__track .carousel__slide { display: block; }
+
+.carousel__track .carousel__slide:nth-of-type(1) {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+.carousel__track .carousel__slide:nth-of-type(2) {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.carousel__track .carousel__slide:nth-of-type(3) {
+  -webkit-transform: translateX(200%);
+  transform: translateX(200%);
+}
+
+.carousel__track .carousel__slide:nth-of-type(4) {
+  -webkit-transform: translateX(300%);
+  transform: translateX(300%);
+}
+
+.carousel__track .carousel__slide:nth-of-type(5) {
+  -webkit-transform: translateX(400%);
+  transform: translateX(400%);
+}
+
+.carousel__slide {
+  height: 100%;
+  right: 0;
+  position: absolute;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+}
+
+* { box-sizing: border-box; }
+
+.carousel-container { display: inline-block; }
+
+.my-carousel {
+  border-radius: 10px;
+  border: 2px solid #c0c0c0;
+  margin: 30px;
+}
+
+.carousel__slide {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel__indicator { background-color: #fafafa; }
+
+.carousel__slide:nth-of-type(1) {
+  background-image: url("https://unsplash.it/300?random");
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel__slide:nth-of-type(2) {
+  background-image: url("https://unsplash.it/600?random");
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel__slide:nth-of-type(3) {
+  background-image: url("https://unsplash.it/900?random");
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 400px) {
+
+.carousel { max-width: 300px; }
+}
+@-webkit-keyframes 
+carousel-show-slide {  from {
+ opacity: 0;
+}
+
+to { opacity: 1; }
+}
+@keyframes 
+carousel-show-slide {  from {
+ opacity: 0;
+}
+
+to { opacity: 1; }
+}
+</style>
+<link href="https://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="css-script-menu">
+  <div class="css-script-center">
+    <ul>
+      <li><a href="https://www.cssscript.com/pure-css-carousel-slidershow/">Download</a></li>
+      <li><a href="https://www.cssscript.com/">Back To CSS Script</a></li>
+    </ul>
+    <div class="css-script-ads">
+    <script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* CSSScript Demo Page */
+google_ad_slot = "3025259193";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+      <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+    <div class="css-script-clear"></div>
+  </div>
+</div>
+<h1>Pure CSS carousel / slideshow demos</h1>
+<div class="carousel-container">
+  <h2>fade in/out</h2>
+  <ul class="carousel my-carousel">
+    <input type="radio" id="1" name="activator" checked="checked" class="carousel__activator"/>
+    <input type="radio" id="2" name="activator" class="carousel__activator"/>
+    <input type="radio" id="3" name="activator" class="carousel__activator"/>
+    <div class="carousel__controls">
+      <label for="2" class="carousel__control carousel__control--backward"></label>
+      <label for="3" class="carousel__control carousel__control--forward"></label>
+    </div>
+    <div class="carousel__controls">
+      <label for="3" class="carousel__control carousel__control--backward"></label>
+      <label for="1" class="carousel__control carousel__control--forward"></label>
+    </div>
+    <div class="carousel__controls">
+      <label for="1" class="carousel__control carousel__control--backward"></label>
+      <label for="2" class="carousel__control carousel__control--forward"></label>
+    </div>
+    <li class="carousel__slide">
+      <h1>Peter</h1>
+    </li>
+    <a href="" class="carousel__slide">
+		<li>
+			<h1>Stewie</h1>
+	  	</li>
+	</a>
+    <li class="carousel__slide">
+      <h1>Brian</h1>
+    </li>
+    <div class="carousel__indicators">
+      <label for="1" class="carousel__indicator"></label>
+      <label for="2" class="carousel__indicator"></label>
+      <label for="3" class="carousel__indicator"></label>
+    </div>
+  </ul>
+</div>
+
+<div class="carousel-container">
+  <h2>slider</h2>
+  <ul class="carousel my-carousel carousel--translate">
+    <input type="radio" name="carousel" id="6" checked="checked" class="carousel__activator"/>
+    <input type="radio" name="carousel" id="7" class="carousel__activator"/>
+    <input type="radio" name="carousel" id="8" class="carousel__activator"/>
+    <input type="radio" name="carousel" id="9" class="carousel__activator"/>
+    <input type="radio" name="carousel" id="10" class="carousel__activator"/>
+    <div class="carousel__controls">
+      <label for="10" class="carousel__control carousel__control--forward"></label>
+      <label for="7" class="carousel__control carousel__control--backward"></label>
+    </div>
+    <div class="carousel__controls">
+      <label for="6" class="carousel__control carousel__control--forward"></label>
+      <label for="8" class="carousel__control carousel__control--backward"></label>
+    </div>
+    <div class="carousel__controls">
+      <label for="7" class="carousel__control carousel__control--forward"></label>
+      <label for="9" class="carousel__control carousel__control--backward"></label>
+    </div>
+    <div class="carousel__controls">
+      <label for="8" class="carousel__control carousel__control--forward"></label>
+      <label for="10" class="carousel__control carousel__control--backward"></label>
+    </div>
+    <div class="carousel__controls">
+      <label for="9" class="carousel__control carousel__control--forward"></label>
+      <label for="6" class="carousel__control carousel__control--backward"></label>
+    </div>
+    <div class="carousel__track">
+      <div class="carousel__slide">
+        <h1>6</h1>
+      </div>
+      <div class="carousel__slide">
+        <h1>7</h1>
+      </div>
+      <div class="carousel__slide">
+        <h1>8</h1>
+      </div>
+      <div class="carousel__slide">
+        <h1>9</h1>
+      </div>
+      <div class="carousel__slide">
+        <h1>10</h1>
+      </div>
+    </div>
+    <div class="carousel__indicators">
+      <label for="6" class="carousel__indicator"></label>
+      <label for="7" class="carousel__indicator"></label>
+      <label for="8" class="carousel__indicator"></label>
+      <label for="9" class="carousel__indicator"></label>
+      <label for="10" class="carousel__indicator"></label>
+    </div>
+  </ul>
+</div>
+</body><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46156385-1', 'cssscript.com');
+  ga('send', 'pageview');
+
+</script>
+</html>

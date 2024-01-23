@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/S-Logo.png" type="icon">
+    <title>Family Guy</title>
+    <link rel="stylesheet" href="../styles/homepage.css">
+    <script src="https://kit.fontawesome.com/0860c28f1b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img class="page-logo" src="../../Images/FG.png" alt="Logo Family Guy"></a>
+        </div>
+        <div class="menu">
+            <nav class="menu-content">
+                <a href="characters.html">Characters</a>
+                <a href="community.html">Community</a>
+                <a href="threat.html">Don't click this or else</a>
+            </nav>
+        </div>
+        <div class="dropdown">
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu">
+                <i class="fa-solid fa-bars fa-2xl"></i>
+            </label>
+
+        <nav>
+            <ul class="dropdown-content">
+                <li><a href="characters.html">Characters</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="threat.html">Don't click this or else</a></li>
+            </ul>
+        </nav>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="synopsis-container">
+            <div class="synopsis">
+                <h2>What is Family Guy ?</h2>
+                    Family Guy is an American animated sitcom created by Seth MacFarlane
+                    The show centers around the adventures and activities of the dysfunctional Griffin family,
+                    consisting of father Peter Griffin, a bumbling and clumsy yet well-intentioned blue-collar worker;
+                    his wife Lois, a stay-at-home mother and piano teacher (in early episodes) who is a member of the affluent Pewterschmidt family;
+                    Meg, their often bullied teenage daughter who is constantly ridiculed or ignored by the family;
+                    Chris, their awkward teenage son, who is overweight, unintelligent, unathletic and, in many respects, simply a younger version of his father
+                    and Stewie, their diabolical infant son of ambiguous sexual orientation who is an adult-mannered evil genius and uses stereotypical archvillain phrases.
+                    Living with the family is their witty, smoking, martini-swilling, sarcastic,
+                    English-speaking anthropomorphic dog Brian,
+                    although he is still considered a pet in many ways.                
+            </div>
+            <div class="griffins">
+                <img src="../images/Griffin_family.png" alt="Griffin family">
+            </div>
+        </section>
+        <section class="characters-container">
+            <div class="char-heading-container">
+                <h2>Some Characters</h2>
+            </div>
+            <div class="primary">
+                <div class="Stewie">
+                    <div class="char-desc">
+                        Stewart "Stewie" Gilligan Griffin is the flamboyant and eccentric one year old infant of Peter and Lois Griffin. Mentally he seems much older,
+                        even proclaiming to be shooting on a fifth grade level.
+                        Stewie is well-spoken, with an advanced vocabulary,
+                        an upper-class British accent and an ambiguous sexual orientation.
+                        He refers to Peter often as 'The Fat man' and his mother by her given name, Lois.
+                    </div>
+                    <div class="char-pics">
+                        <img src="../images/Characters/Stewie-Backpack.png" alt="Stewie Griffin">
+                    </div>            
+                </div>
+            </div>
+
+            <div class="secondary">
+                <div class="Brian">
+                    <div class="char-desc">
+                        Brian Edward Griffin is an 10-year old talking white Labrador who has lived with
+                        the Griffin family since Peter picked him up as a stray as shown in "Brian:
+                        Portrait of a Dog". He also possesses various anthropomorphic qualities,
+                        such as the ability to speak intelligently, drive a car, and walk bipedally.
+                    </div>
+                    <div class="char-pics">
+                        <img src="../images/Characters/Brian.png" alt="Brian Griffin">
+                    </div>
+                </div>
+                <div class="Quagmire">
+                    <div class="char-desc">
+                        Glenn Quagmire (born Glenn Quagglechek) is the sex-crazed, perverted neighbor of the Griffins.
+                        Quagmire is a former ensign of the U.S. Navy.
+                        He currently works as an airline pilot.
+                        Quagmire is roughly 5'8" tall in and 61 years old according to his driver's license,
+                        he explains that he makes himself look younger by consuming carrots.
+                    </div>
+                    <div class="char-pics">
+                        <img src="../images/Characters/Quagmire.jpg" alt="Glenn Quagmire">
+                    </div>            
+                </div>
+            </div>
+            <div class="sm-btn-container">
+                <button type="button" class="sm-btn"><a href="characters.html">Show more Characters</a></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="ft-content">
+            <div class="ft-text">
+                - Stewie, quick make a footer.
+                - No, thank you, I'd much rather give you the finger.”
+            </div>
+            <div class="ft-image">
+                <img src="../images/stewie-middle-finger.png" alt="Stewie giving you the finger">
+            </div>
+        </div>
+    </footer>
+    
+    <button class="btt"><i class="fa-solid fa-arrow-up fa-2xl"></i></button>
+    <script>
+        window.addEventListener('scroll', () => {
+            const backToTopButton = document.querySelector('.btt');
+            if (window.scrollY > 75) {
+                backToTopButton.style.opacity = '1';
+                backToTopButton.style.pointerEvents = 'auto';
+            } else {
+                backToTopButton.style.opacity = '0';
+                backToTopButton.style.pointerEvents = 'none';
+            }
+        });
+
+        document.querySelector('.btt').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    
+</body>
+</html>

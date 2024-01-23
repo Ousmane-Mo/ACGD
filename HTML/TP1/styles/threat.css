@@ -1,0 +1,25 @@
+@import url(style.css);
+
+.threat-container{
+    background-image: url(../images/stewie-rocket-launcher.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 900px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+        .threat-message{
+            text-align: center;
+            font-size: 3em;
+            font-family: 'FG';
+            font-weight: bolder;
+        }
+}
+footer{
+    display: none;
+}
