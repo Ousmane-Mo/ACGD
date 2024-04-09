@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Inter&display=swap');
+body {
+  background-color: #dc71e3;
+  font-family: 'Honk', sans-serif;
+}
+.date_container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        span {
+            font-size: xx-large;
+            margin: 15px;
+        }
+}
+.clock_container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.separator {
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 5rem;
+    line-height: 50px;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: translateX(0%) translateY(-40px) rotateX(90deg) rotate(0deg);
+            transform: translateX(0%) translateY(-40px) rotateX(90deg) rotate(0deg);
+}
+.digits {
+  height: 200px;
+  width: 50px;
+  padding: 0;
+  position: relative;
+  margin: auto;
+  list-style-type: none;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  display: inline-block;
+}
+
+.digits li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 50%;
+  width: 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.digits li span {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 5rem;
+  line-height: 50px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateX(-50%) translateY(-40px) rotateX(90deg) rotate(90deg);
+          transform: translateX(-50%) translateY(-40px) rotateX(90deg) rotate(90deg);
+}
+
+.digits li:nth-child(1) {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.digits li:nth-child(2) {
+  -webkit-transform: rotate(-36deg);
+          transform: rotate(-36deg);
+}
+
+.digits li:nth-child(3) {
+  -webkit-transform: rotate(-72deg);
+          transform: rotate(-72deg);
+}
+
+.digits li:nth-child(4) {
+  -webkit-transform: rotate(-108deg);
+          transform: rotate(-108deg);
+}
+
+.digits li:nth-child(5) {
+  -webkit-transform: rotate(-144deg);
+          transform: rotate(-144deg);
+}
+
+.digits li:nth-child(6) {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.digits li:nth-child(7) {
+  -webkit-transform: rotate(-216deg);
+          transform: rotate(-216deg);
+}
+
+.digits li:nth-child(8) {
+  -webkit-transform: rotate(-252deg);
+          transform: rotate(-252deg);
+}
+
+.digits li:nth-child(9) {
+  -webkit-transform: rotate(-288deg);
+          transform: rotate(-288deg);
+}
+
+.digits li:nth-child(10) {
+  -webkit-transform: rotate(-324deg);
+          transform: rotate(-324deg);
+}
+
+.digits.hours li span {
+  color: #493843;
+}
+
+.digits.minutes li span {
+  color: #E56B6F;
+}
+
+.digits.seconds li span {
+  color: #98B6B1;
+}

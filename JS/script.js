@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#btn-spoiler1').click(function () { 
+    /* $('#btn-spoiler1').click(function () { 
         $('#text-2').toggleClass('hidden');
     });
     $('#btn-spoiler2').click(function () { 
@@ -37,8 +37,8 @@ $(document).ready(function () {
         $(this).parent().toggleClass('crimbg');
      });
 
-
-    //  exo11();
+    exo11();
+    */
 })
 
 
@@ -470,10 +470,14 @@ function btnClean() {
 }
 */
 
-/*function exo11() {
+
+// Exo 11
+/*
+function exo11() {
     $('body').append('<input type="text" id="text" name="text">');
     $('body').append('<button type="button" id="clear"> Clear </button>');
     $('button').click(function () { 
         $('input').val("");
      });
-}*/
+}
+*/
